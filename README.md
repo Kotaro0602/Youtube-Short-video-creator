@@ -25,6 +25,21 @@ orchestratorが以下を全自動実行:
 4. レビュー＆自動修正（最大2回）
 5. Google Driveに保存
 
+### エピソードから台本を作る
+
+面白いエピソードを投げるだけ:
+
+```
+この前上司に転職考えてるって言ったら翌日めっちゃ優しくなってて草、これで台本作って
+```
+
+episode-orchestratorが以下を全自動実行:
+1. エピソード分析（面白さの核を抽出、最適な年代を判定）
+2. 時代別リサーチ（エピソードとの対比を重視）
+3. 台本執筆（エピソードを配置年代の口調に変換）
+4. レビュー＆自動修正（最大2回）
+5. Google Driveに保存
+
 ### チャンネル戦略を更新する（週1目安）
 
 ```bash
@@ -42,7 +57,9 @@ python wasedaya-skills/scripts/fetch_youtube_data.py
 | スキル | コマンド | 役割 |
 |--------|----------|------|
 | wasedaya-orchestrator | `/wasedaya-orchestrator` | テーマ→完成台本の一気通貫実行 |
+| episode-orchestrator | `/episode-orchestrator` | エピソード→完成台本の一気通貫実行 |
 | neta-developer | `/neta-developer` | ネタ5案の開発 |
+| episode-analyzer | `/episode-analyzer` | エピソード分析＆テーマ抽出 |
 | jidai-researcher | `/jidai-researcher` | 選定ネタの時代別リサーチ |
 | script-writer | `/script-writer` | 台本執筆 |
 | script-reviewer | `/script-reviewer` | 台本レビュー＆修正 |
@@ -58,7 +75,9 @@ python wasedaya-skills/scripts/fetch_youtube_data.py
 │   ├── jidai-researcher/          # 時代リサーチ（+ 基礎データ）
 │   ├── script-writer/             # 台本執筆（+ サンプル台本）
 │   ├── script-reviewer/           # 台本レビュー
-│   └── channel-strategist/        # 戦略分析（+ テンプレート）
+│   ├── channel-strategist/        # 戦略分析（+ テンプレート）
+│   ├── episode-orchestrator/      # エピソードベース統括
+│   └── episode-analyzer/          # エピソード分析
 ├── mcp.json                       # Google Drive MCP設定（※git管理外・各自作成）
 ├── settings.local.json            # 許可設定（※git管理外・各自作成）
 wasedaya-skills/
